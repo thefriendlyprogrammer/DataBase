@@ -1,3 +1,4 @@
+USE [Alok_Kushwaha]
 /*
 Joins
 	When we retrive the data from more than one table. 
@@ -14,32 +15,35 @@ Joins
 		)
 
 		INNER JOINS*/
-
-			SELECT * FROM Student INNER JOIN Academic ON Academic.AID =  Student.SID
+			--The inner join keyword selects records that have matching values in 
+			--	both tables.
+			 
+				SELECT * FROM Students INNER JOIN Academic ON Academic.AID =  Students.SID
 
 		--OUTER JOINS
 
 					--LEFT JOINS
+						--
 
-						SELECT * FROM Academic LEFT JOIN Student ON Student.SID = Academic.AID
+						SELECT * FROM Academic LEFT JOIN Students ON Students.SID = Academic.AID
 
 					--RIGHT JOINS
 
-						SELECT * FROM Student RIGHT JOIN  Academic ON Student.SID = Academic.AID
+						SELECT * FROM Students RIGHT JOIN  Academic ON Students.SID = Academic.AID
 
 					--FULL OUTER
 
-						SELECT * FROM  Academic FULL JOIN Student  ON Student.SID = Academic.AID
+						SELECT * FROM  Academic FULL JOIN Students  ON Students.SID = Academic.AID
 
 		--CROSS JOINS
 
-			SELECT Student.SID,  Academic.AID FROM Student CROSS JOIN Academic
+			SELECT Students.SID,  Academic.AID FROM Students CROSS JOIN Academic
 			
 			/*	Cross joins is follow one way comparsion 
 				if you want to write revers query result is change only  place (formate ) not results.
 			*/
 
-			SELECT Academic.AID, Student.SID FROM Academic CROSS JOIN Student
+			SELECT Academic.AID, Students.SID FROM Academic CROSS JOIN Students
 
 		--Natural JOINS
 

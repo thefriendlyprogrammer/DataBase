@@ -41,14 +41,15 @@ Store Procedure Without Parameter
 		Using @ sign to create variables*/
 
 		CREATE PROCEDURE INSERTDATAINEMPLOYEE @EID int, @EName varchar(50), @EPhone varchar(13), @EEmail varchar (50), @EAddress varchar(100), @ESalary int, @EDesig varchar(50), @EDepr varchar(50) 
-		AS
+ 		AS
 		BEGIN
 		INSERT INTO Employee VALUES(@EID, @EName, @EPhone, @EEmail, @EAddress, @ESalary, @EDesig, @EDepr )
 		END
 
 	--Execution of (INSERTDATAINEMPLOYEE) inserting data in employee
 	
-		EXECUTE INSERTDATAINEMPLOYEE 1, 'Alok Kushwaha', '+917388122129', 'alok.info90@gmail.com', 'Noida Sector 58', 20000,'.Net Trainee','Software Engineer'
+		EXECUTE INSERTDATAINEMPLOYEE 3, 'Abhishek Singh', '+917388122129', 
+		'shitu.info90@gmail.com', 'Greater Noida', 30000,'.Net Trainee','Software Engineer'
 		
 /* Strore Procedure With Parameter 
 	** OUT/OUTPUT  
